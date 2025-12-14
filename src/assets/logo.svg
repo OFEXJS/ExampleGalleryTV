@@ -1,0 +1,156 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 赛博朋克渐变 -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff00ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffff00;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff1493;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- 霓虹发光效果 -->
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 网格背景 -->
+    <pattern id="gridPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00ffff" stroke-width="0.5" opacity="0.2"/>
+      <path d="M 0 20 L 20 20" fill="none" stroke="#00ffff" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="200" height="60" fill="url(#gridPattern)"/>
+  <rect width="200" height="60" fill="#0a0a0a" opacity="0.9"/>
+  
+  <!-- VUE 字母 - 赛博朋克风格 -->
+  <g transform="translate(10, 15)">
+    <!-- V -->
+    <path d="M 5 5 L 5 35 L 8 35 L 8 25 L 10 25 L 10 35 L 13 35 L 13 5 Z" 
+          fill="url(#primaryGradient)" 
+          stroke="#00ffff" 
+          stroke-width="0.5" 
+          filter="url(#neonGlow)"/>
+    
+    <!-- U -->
+    <path d="M 18 35 C 18 35, 16 30, 16 25 C 16 20, 20 15, 22 15 C 24 15, 26 20, 26 35 C 26 35, 28 30, 28 25 C 28 20, 30 15, 32 15 C 34 15, 36 20, 36 35 L 36 25 C 36 20, 34 15, 32 15 C 30 15, 28 20, 28 25 C 28 30, 26 35, 26 35" 
+          fill="none" 
+          stroke="url(#primaryGradient)" 
+          stroke-width="2" 
+          filter="url(#neonGlow)"/>
+    
+    <!-- E -->
+    <path d="M 48 15 L 48 35 M 48 15 L 58 15 M 48 25 L 58 25 M 48 35 L 58 35" 
+          stroke="url(#primaryGradient)" 
+          stroke-width="2" 
+          stroke-linecap="round"
+          filter="url(#neonGlow)"/>
+  </g>
+  
+  <!-- GALLERY 文字 -->
+  <g transform="translate(70, 20)">
+    <text x="0" y="8" 
+             font-family="monospace" 
+             font-size="12" 
+             font-weight="900" 
+             letter-spacing="1.5"
+             fill="url(#accentGradient)" 
+             filter="url(#strongGlow)">
+      GALLERY
+    </text>
+    
+    <!-- 装饰线条 -->
+    <path d="M -5 15 L 0 15 M -5 20 L 0 20 M -5 25 L 0 25" 
+          stroke="#00ffff" 
+          stroke-width="0.5" 
+          opacity="0.6"
+          stroke-linecap="round"/>
+    
+    <path d="M 65 15 L 70 15 M 65 20 L 70 20 M 65 25 L 70 25" 
+          stroke="#00ffff" 
+          stroke-width="0.5" 
+          opacity="0.6"
+          stroke-linecap="round"/>
+  </g>
+  
+  <!-- 装饰元素 -->
+  <g transform="translate(150, 10)">
+    <!-- 霓虹圆点 -->
+    <circle cx="0" cy="0" r="2" fill="#00ffff" opacity="0.8" filter="url(#neonGlow)"/>
+    <circle cx="10" cy="5" r="1.5" fill="#ff00ff" opacity="0.6" filter="url(#neonGlow)"/>
+    <circle cx="20" cy="2" r="1" fill="#ffff00" opacity="0.4" filter="url(#neonGlow)"/>
+    
+    <!-- 扫描线 -->
+    <rect x="-5" y="35" width="30" height="1" fill="url(#primaryGradient)" opacity="0.6"/>
+  </g>
+  
+  <!-- 副标题 -->
+  <text x="100" y="45" 
+           text-anchor="middle" 
+           font-family="monospace" 
+           font-size="8" 
+           font-weight="600" 
+           letter-spacing="2"
+           fill="#666" 
+           opacity="0.8">
+    COMPONENTS
+  </text>
+  
+  <!-- 边框装饰 -->
+  <rect x="2" y="2" width="196" height="56" 
+        fill="none" 
+        stroke="url(#primaryGradient)" 
+        stroke-width="0.5" 
+        opacity="0.3"
+        rx="2"/>
+  
+  <!-- 角落装饰 -->
+  <g>
+    <!-- 左上角 -->
+    <path d="M 2 2 L 12 2 M 2 2 L 2 12" 
+          stroke="#00ffff" 
+          stroke-width="1" 
+          opacity="0.6"/>
+    
+    <!-- 右上角 -->
+    <path d="M 188 2 L 198 2 M 198 2 L 198 12" 
+          stroke="#ff00ff" 
+          stroke-width="1" 
+          opacity="0.6"/>
+    
+    <!-- 左下角 -->
+    <path d="M 2 48 L 12 48 M 2 58 L 2 48" 
+          stroke="#ffff00" 
+          stroke-width="1" 
+          opacity="0.6"/>
+    
+    <!-- 右下角 -->
+    <path d="M 188 48 L 198 48 M 198 58 L 198 48" 
+          stroke="#00ffff" 
+          stroke-width="1" 
+          opacity="0.6"/>
+  </g>
+  
+  <!-- 底部发光线 -->
+  <rect x="5" y="55" width="190" height="2" 
+        fill="url(#primaryGradient)" 
+        opacity="0.2"
+        filter="url(#strongGlow)"/>
+</svg>

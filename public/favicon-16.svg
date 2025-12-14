@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- 简化的16x16版本 -->
+  <rect width="16" height="16" rx="2" fill="#0a0a0a"/>
+  <path d="M3 4 L8 12 L13 4" 
+        stroke="#00ffff" 
+        stroke-width="2" 
+        fill="none" 
+        stroke-linecap="round"/>
+  <circle cx="3" cy="4" r="1" fill="#00ffff"/>
+  <circle cx="8" cy="12" r="1" fill="#ff00ff"/>
+  <circle cx="13" cy="4" r="1" fill="#ffff00"/>
+</svg>
