@@ -36,14 +36,14 @@ const routes: RouteRecordRaw[] = [
       description: '单个组件的详细演示'
     }
   },
-  {
-    path: '/:pathMatch(.*)*',
-    redirect: '/'
-  }
+  // {
+  //   path: '/:pathMatch(.*)*',
+  //   redirect: '/'
+  // }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/Entry/ExampleGalleryTV/'),
   routes,
   scrollBehavior(_to, _from, savedPosition) {
     if (savedPosition) {
